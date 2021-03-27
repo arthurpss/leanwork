@@ -12,8 +12,6 @@ public class HomePage {
 		this.driver = driver;
 	}
 	
-	//Se a largura for menor que 1200px, o botão para acessar a tela de login fica dentro do "hamburguer"
-	//TODO: Tornar assincrono o clique quando a tela estiver responsiva
 	private WebElement getCadastrarLink() {
 		Dimension windowSize = driver.manage().window().getSize();
 		if(windowSize.width >= 1200) {
@@ -25,7 +23,6 @@ public class HomePage {
 	}
 	
 	public void clickCadastrar() {
-		WebElement cadastrar = getCadastrarLink();
-		cadastrar.click();
+		getCadastrarLink().click();
 	}
 }
